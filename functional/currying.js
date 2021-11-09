@@ -4,7 +4,7 @@
  * Mosh's Redux Tutorial
  * https://youtu.be/poQXNp9ItL4?t=932
  */
-import { pipe } from "lodash/fp";
+import { pipe } from "lodash/fp"; // the "pipe" function was discussed in "./composition.js"
 
 const input = "  JavaScript  ";
 
@@ -66,15 +66,20 @@ const add2 = (a) => (b) => a + b;
  * const addOne = a => a + 1;
  * console.log(addOne(2)); // Output: 3
  *
- * Because, single line arrow functions return the value, that means
+ * Because, the 'return' is implied when there is no braces, that means
  *
  * const addOne = a => a + 1; // is same as,
  * const addOne = a => return a + 1;
  *
+ * This will not not work if you use braces, e.g.
+ * const addTwo = a => {a + 2}; // this function will not return anything,
+ * const addTwo = a => {return a + 2}; // this function will return a number
+ *
  * 🤗 Alright, now that we have that out of the way, we can get back in track.
  *
- * In the add2 function the first take in one argument (i.e. a) and returns a
- * function that also take one argument (i.e. b) and returns the addition of a and b.
+ * In the add2 function, the first function takes in one argument (i.e. a) and
+ * returns a function, which also take one argument (i.e. b) and returns the addition
+ * of a and b.
  */
 console.log(add2(3)(7)); // Output: 10
 
