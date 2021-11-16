@@ -29,7 +29,7 @@ function binarySearch(array,first,last,key) {
         return -1;
     }
     //Dividing the array into parts
-    let mid=1+Math.floor((last-first)/2)
+    let mid=Math.floor((last+first)/2)
 
 
     //Comparing the middle element with the key
@@ -42,7 +42,7 @@ function binarySearch(array,first,last,key) {
     }else{
         //If element is less than mid,then it can be only present in the first half
         //of the array as the array is sorted
-        return binarySearch(array,first,mid-1,key)
+        return binarySearch(array,first,mid,key)
     }
 }
 
@@ -68,7 +68,7 @@ const array=[1,2,3,4,5,6,7,8,9]//Declaring an array
 
 let endIndex=array.length-1//Last index of array
 
-let resultIndex=iterativeBinarySearch(array,5)//Function Call
+let resultIndex=binarySearch(array,0,endIndex,8)//Function Call
 
 if(resultIndex===-1){//Return check to see if the element is present or not
     console.log("Element not found!!!!")
