@@ -91,5 +91,4 @@ if(resultIndex===-1){//Return check to see if the element is present or not
     *Second Check
     In the second call the mid index will be 3 so the element will be 4
     Thus the key is present at the middle index of this half it will return the index 3
-
  */
