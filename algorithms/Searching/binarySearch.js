@@ -29,7 +29,7 @@ function binarySearch(array,first,last,key) {
         return -1;
     }
     //Dividing the array into parts
-    let mid=Math.floor((last-first)/2)
+    let mid=Math.floor((last+first)/2)
 
 
     //Comparing the middle element with the key
