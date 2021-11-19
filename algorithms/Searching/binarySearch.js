@@ -74,7 +74,7 @@ if (resultIndex === -1) {
 
 /**
  * Dry Run for the given example:
-<<<<<<< HEAD
+ *
  *  The given array is [1,2,3,4,5,6,7,8,9]
  *  Note:Array is sorted
  *
@@ -88,18 +88,5 @@ if (resultIndex === -1) {
  *  In the second call the mid index will be 3 so the element will be 4
  *  Thus the key is present at the middle index of this half it will return the index 3
  *
-=======
-    The given array is [1,2,3,4,5,6,7,8,9]
-    Note:Array is sorted
-
-    The element given to find is 4
-    
-    *First Check
-    In the first call the mid index will be 5 so the element will be 6
-    As 6 is greater than 4 the element can only be present in first half
-
-    *Second Check
-    In the second call the mid index will be 3 so the element will be 4
-    Thus the key is present at the middle index of this half it will return the index 3
->>>>>>> fef9bc78d9fbb3ac18dff20f709f281729f9fc8b
+ *
  */
