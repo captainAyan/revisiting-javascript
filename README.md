@@ -29,8 +29,8 @@ This is me trying to learn modern features in javascript, and revisiting some im
 ## Advanced Topics
 
 - [ ] **Advanced Scope**: Nest functions, Lexical scoping, immediately invoked function expression, and revealing module pattern.
-- [X] Closure
-- [X] Currying
+- [x] Closure
+- [x] Currying
 - [ ] **this**: Implicit binding, Explicit Binding, new Binding, Lexical Binding, and Default Binding.
 - [ ] Prototype
 - [ ] Prototype Inheritance
@@ -38,7 +38,6 @@ This is me trying to learn modern features in javascript, and revisiting some im
 - [ ] Iterators, and Generators
 - [ ] Event Loop
 - [ ] **Asynchronous JavaScript**: setTimeout, setInterval, callback, Promises, and async await
-
 
 Javascript Learning Path by **Codevolution** [Link](https://www.youtube.com/watch?v=gSnbnYffz7k)
 
