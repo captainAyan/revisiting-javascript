@@ -6,12 +6,11 @@
  *
  * W3School
  * https://www.w3schools.in/data-structures-tutorial/searching-techniques/#What_is_Linear_Search
- *
  */
 
 /**
+ * Linear Search:
  *
- *  **Linear Searcg
  * This is the simplest method for searching. In this technique of searching,
  * the element to be found in searching the elements to be found is searched sequentially
  * in the list. This method can be performed on a sorted or an unsorted list
@@ -21,18 +20,18 @@
  * searched is reached
  */
 
-//
-// Javascript code to linearly search x in arr[]. If x
-// is present then return its location, otherwise
-// return -1
+/**
+ * Javascript code to linearly search x in arr[]. If x
+ * is present then return its location, otherwise return -1
+ */
 
 function search(arr, n, x) {
   let i;
   for (i = 0; i < n; i++) {
-    //Checking if the element is present at index i.If found return i
+    // Checking if the element is present at index i.If found return i
     if (arr[i] == x) return i;
   }
-  //If not found return -1
+  // If not found return -1
   return -1;
 }
 
@@ -45,14 +44,15 @@ let n = arr.length;
 // Function call
 let result = search(arr, n, x);
 if (result === -1) {
-  console.log("Element not found"); //Output:Element not found
+  console.log("Element not found"); // Output: Element not found
 } else {
-  console.log(`Element found at index ${result}`); //Output:Element found at index 3
+  console.log(`Element found at index ${result}`); // Output: Element found at index 3
 }
 
 /**
  *
- *  **Dry Run
+ * Dry Run:
+ *
  * A simple approach is to do a linear search, i.e
  * Start from the leftmost element of arr[] and one by one compare x with each element
  * of arr[]

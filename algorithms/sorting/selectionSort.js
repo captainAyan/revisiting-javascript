@@ -1,17 +1,15 @@
 /**
- * **Selection Sort
+ * Selection Sort
  *
  * Geeks For Geeks
- *
  * https://www.geeksforgeeks.org/selection-sort/
  *
- * Tutorialspoint
- *
+ * Tutorials Point
  * https://www.tutorialspoint.com/data_structures_algorithms/selection_sort_algorithm.htm
  */
 
 /**
- * **Selection Sort
+ * Selection Sort:
  *
  * Selection sort is a simple sorting algorithm. This sorting algorithm is an
  * in-place comparison-based algorithm in which the list is divided into two parts,
@@ -25,13 +23,12 @@
  */
 
 /**
- *  **Algorithm
+ * Algorithm:
  * Step 1 − Set MIN to location 0
  * Step 2 − Search the minimum element in the list
  * Step 3 − Swap with value at location MIN
  * Step 4 − Increment MIN to point to next element
  * Step 5 − Repeat until list is sorted
- *
  */
 
 // Javascript program for implementation of selection sort
@@ -58,4 +55,4 @@ function selectionSort(arr, n) {
 var arr = [64, 25, 12, 22, 11];
 var n = 5;
 selectionSort(arr, n);
-console.log(arr); //Output:[ 11, 12, 22, 25, 64 ]
+console.log(arr); // Output: [ 11, 12, 22, 25, 64 ]

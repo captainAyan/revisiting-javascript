@@ -1,18 +1,15 @@
 /**
- *  **Merge Sort
+ * Merge Sort
  *
  * Geeks For Geeks
- *
  * https://www.geeksforgeeks.org/merge-sort/
  *
  * Tutorials Point
- *
  * https://www.tutorialspoint.com/how-to-implement-merge-sort-in-javascript
- *
  */
 
 /**
- *  **Merge Sort
+ * Merge Sort:
  * Merge sort is the sorting technique that follows the divide and conquer approach.
  * Merge sort is similar to the quick sort algorithm as it uses the divide and conquer
  * approach to sort the elements.It divides the given list into two equal halves, calls itself for the two halves and then merges the two sorted halves. We have to define the merge() function to perform the merging.
@@ -20,16 +17,14 @@
  * divided further. Then we combine the pair of one element lists into two-element
  * lists, sorting them in the process. The sorted two-element pairs is merged into
  * the four-element lists, and so on until we get the sorted list.
- *
  */
 
 /**
- *
- *  **Algorithm
- *Step 1.Split the given list into two halves (roughly equal halves in case of a list with an odd number of elements).
- *Step 2.Continue dividing the subarrays in the same manner until you are left with only single element arrays.
- *Step 3.Starting with the single element arrays, merge the subarrays so that each merged subarray is sorted.
- *Step 4.Repeat step 3 unit with end up with a single sorted array.
+ * Algorithm:
+ * Step 1.Split the given list into two halves (roughly equal halves in case of a list with an odd number of elements).
+ * Step 2.Continue dividing the subarrays in the same manner until you are left with only single element arrays.
+ * Step 3.Starting with the single element arrays, merge the subarrays so that each merged subarray is sorted.
+ * Step 4.Repeat step 3 unit with end up with a single sorted array.
  */
 
 // JavaScript program for Merge Sort
@@ -71,16 +66,14 @@ function merge(arr, l, m, r) {
     k++;
   }
 
-  // Copy the remaining elements of
-  // L[], if there are any
+  // Copy the remaining elements of L[], if there are any
   while (i < n1) {
     arr[k] = L[i];
     i++;
     k++;
   }
 
-  // Copy the remaining elements of
-  // R[], if there are any
+  // Copy the remaining elements of R[], if there are any
   while (j < n2) {
     arr[k] = R[j];
     j++;
@@ -88,12 +81,10 @@ function merge(arr, l, m, r) {
   }
 }
 
-// l is for left index and r is
-// right index of the sub-array
-// of arr to be sorted */
+// l is for left index and r is right index of the sub-array of arr to be sorted
 function mergeSort(arr, l, r) {
   if (l >= r) {
-    return; //returns recursively
+    return; // returns recursively
   }
   var m = l + parseInt((r - l) / 2);
   mergeSort(arr, l, m);
@@ -104,8 +95,8 @@ function mergeSort(arr, l, r) {
 var arr = [12, 11, 13, 5, 6, 7];
 var arr_size = arr.length;
 
-console.log("Given array is :", arr); //Output : Given array is : [ 12, 11, 13, 5, 6, 7 ]
+console.log("Given array is :", arr); // Output: Given array is : [ 12, 11, 13, 5, 6, 7 ]
 
 mergeSort(arr, 0, arr_size - 1);
 
-console.log("Sorted array is :", arr); //Output: Sorted array is : [ 5, 6, 7, 11, 12, 13 ]
+console.log("Sorted array is :", arr); // Output: Sorted array is : [ 5, 6, 7, 11, 12, 13 ]
