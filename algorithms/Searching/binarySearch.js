@@ -76,7 +76,7 @@ if (resultIndex === -1) {
   // Return check to see if the element is present or not
   console.log("Element not found!!!!"); // Output: Element not found!!!!
 } else {
-  console.log("Element found at index:" + resultIndex); // Output: Element found at index:3
+  console.log("Element found at index:" + resultIndex); // Output: Element found at index:7
 }
 
 /**
