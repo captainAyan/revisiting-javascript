@@ -53,4 +53,4 @@ function countingSort(arr) {
 }
 
 let arr = [1, 0, 1, 2, 4, 6, 8, 2];
-console.log(countingSort(arr)); //expected output:[0,1,1,2,4,6,8]
+console.log(countingSort(arr)); //expected output:[0,1,1,2,2,4,6,8]
