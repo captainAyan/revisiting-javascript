@@ -1,3 +1,29 @@
+/**
+ * Quick Sort
+ *
+ * Geeks For Geeks
+ * https://www.geeksforgeeks.org/quick-sort/
+ *
+ * Tutorials Point
+ * https://www.tutorialspoint.com/how-to-implement-quick-sort-in-javascript
+ */
+
+/**
+ * Quick Sort:
+ * Quick sort is the sorting technique that follows the divide and conquer approach.
+ * Quick sort is similar to the merge sort algorithm as it uses the divide and conquer
+ * approach to sort the elements.It divides the given list into two halves, calls itself for the two halves and then merges the two sorted halves. We have to define the quicksort() function to perform the merging.
+ * The sub-lists are divided again and again into halves until the list cannot be
+ * divided further. Then we combine all returns of partition algorithm, so on until we get the sorted list.
+ */
+
+/**
+ * Algorithm:
+ * Step 1.Split the given list into two halves.
+ * Step 2.Everytime we call quickSort(a, l, r) we search the new m, which is in the end at the correct position.
+ * Step 3.Repeat step 2 unit with end up with a single sorted array.
+ */
+
 // a is the array, l is left index, r is right index
 function quickSort(a, l, r){
     if (a[0]<a[a.size-1]){
