@@ -50,7 +50,7 @@ newFn("inside");
 
 /**
  * The outerFn is done being executed after calling outerFn("outside"). But then
- * how is it that the outerVar is still accessible to innerFn event though it
+ * how is it that the outerVar is still accessible to innerFn even though it
  * doesn't exist anymore, or does it, Hey, Vsauce Mi... (👁👄👁)
  *
  * Well it is true that outerVar has gone out of scope, but since javascript can
@@ -61,8 +61,8 @@ newFn("inside");
  */
 
 function outerFn2(outerVar) {
-  const outer2 = "Hi";
-  const outer3 = "Hello"; // this will be tracked after execution
+  const outer2 = "Hi"; // this constant will be tracked after outerFn2's execution
+  const outer3 = "Hello"; // this will not be tracked
   return function innerFn2(innerVar) {
     console.log(outer2); // this will print: 'Hi'
     console.log("Outer Variable: " + outerVar);
