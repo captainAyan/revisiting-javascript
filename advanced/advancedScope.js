@@ -138,3 +138,140 @@ const a3 = 1;
 console.log(a3); // Output: 1
 console.log(window.a3); // Output: undefined
 console.log(this.a3); // Output: undefined
+
+/// Function Scope
+var num1 = 20,
+  num2 = 3,
+  name = "Roadside Coder";
+
+function multiply() {
+  return num1 * num2;
+  /**
+   * Since these variables are not in the function scope, javascript will look
+   * for the variable in the parent scope (in this case that is the Global Scope)
+   */
+}
+console.log(multiply()); // Output: 60
+
+// Function Scope in a nested function
+function getScore() {
+  var num1 = 2, // <--- These variables are being shadowed (check out line 46)
+    num2 = 3; // <---┙
+
+  function add() {
+    return name + " score " + (num1 + num2);
+  }
+
+  return add();
+}
+console.log(getScore()); // Output: Roadside Coder score 5
+
+/// Question
+/**
+ * What would be the output of the following program.
+ */
+
+for (let i = 0; i < 5; i++) {
+  setTimeout(function () {
+    console.log(i);
+  }, i * 1000);
+}
+/**
+ * Output:
+ * 0
+ * 1
+ * 2
+ * 3
+ * 4
+ *
+ * Explanation:
+ *
+ * A separate block scope is created for each iteration of the loop, and since
+ * LET has block scope, the first iteration will have the the variable 'i' with
+ * the value 0, and the following iteration will have 1, 2, 3, and 4.
+ *
+ * The setTimeout function is a asynchronous function, therefore it doesn't
+ * pause the execution of other functions. The first delay value is 0 (0 * 1000),
+ * and following are 1000, 2000, 3000, and 4000. As these timers are running
+ * asynchronously, the console logging will occur with 1000 second delay, with
+ * the first value being printed immediately.
+ *
+ * Time Graph: [ -- is one second, * is the point of console log]
+ *
+ * VALUE | DELAY | GRAPH
+ * 0     | 0     | *
+ * 1     | 1000  | --*
+ * 2     | 2000  | -----*
+ * 3     | 3000  | --------*
+ * 4     | 4000  | -----------*
+ */
+
+/**
+ * What would be the output of the following program.
+ */
+for (var i = 0; i < 5; i++) {
+  setTimeout(function () {
+    console.log(i);
+  }, i * 1000);
+}
+
+/**
+ * Output:
+ * 5
+ * 5
+ * 5
+ * 5
+ * 5
+ *
+ * Explanation: VAR doesn't have a block scope, so the value is alter after each
+ * iteration.
+ */
+
+/// Function Hoisting
+
+fun1(); // Output: Test Code
+
+function fun1() {
+  console.log("Test Code");
+}
+fun1(); // Output: Test Code
+
+/**
+ * Explanation:
+ *
+ * Hoisting works a little differently when it comes to functions. In case of
+ * variables, they are hoisted with undefined as their value. But for functions,
+ * a function is hoisted completely (with it's body), and therefore can be
+ * accessed before it is defined.
+ */
+
+/// Question
+/**
+ * What would be the output of the following code?
+ */
+
+var x = 21;
+
+var fun2 = function () {
+  console.log(x);
+  var x = 20;
+};
+
+fun2(); // Output: undefined
+/**
+ * Explanation:
+ *
+ * The variable x is in the global scope, therefore is accessible inside the fun2
+ * function. But since x was declared again in the function, the global variable
+ * got shadowed by the local one.
+ *
+ * On invoking the fun2 function the javascript engine creates a new execution
+ * context for that function only. During the creation phase of the execution
+ * context, the javascript engine hoists the variable x with undefined. Value of
+ * x will be assigned in the execution phase.
+ *
+ * On starting of the execution phase(of the fun2 function's execution context),
+ * the engine looks for value of x in the local scope, and finds it there (so it
+ * doesn't look for x in the parent scope, i.e. the Global Scope). Javascript
+ * prints undefined, as that is the valued assigned to x when hoisted.
+ */
