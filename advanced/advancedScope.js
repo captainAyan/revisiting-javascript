@@ -224,7 +224,8 @@ for (var i = 0; i < 5; i++) {
  * 5
  *
  * Explanation: VAR doesn't have a block scope, so the value is alter after each
- * iteration.
+ * iteration. The value of 'i' becomes 5 at the end, and that is when the loop is
+ * exited, after which the seTimeouts start executing.
  */
 
 /// Function Hoisting
