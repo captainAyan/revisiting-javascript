@@ -165,6 +165,12 @@ const video3 = {
 };
 
 video3.showTags();
+/*
+Output:
+a a
+a b
+a c
+*/
 
 /// Questions
 
