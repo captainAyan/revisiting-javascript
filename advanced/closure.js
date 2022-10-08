@@ -502,7 +502,7 @@ console.log(memoizedClumsyProduct(1234, 4321)); // Output: 5332114
 console.timeEnd("memoized second call"); // Time: ~0.398193359375 ms
 // As you can see that the second call was a lot faster than the first one
 
-// Questions 10: Difference between Closure and Scope
+// Question 10: Difference between Closure and Scope
 /**
  * Answer
  *

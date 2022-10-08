@@ -166,10 +166,8 @@ function getScore() {
 }
 console.log(getScore()); // Output: Roadside Coder score 5
 
-/// Question
-/**
- * What would be the output of the following program.
- */
+/// Questions (RoadsideCoder)
+// Question 1: What would be the output of the following program.
 
 for (let i = 0; i < 5; i++) {
   setTimeout(function () {
@@ -246,10 +244,7 @@ fun1(); // Output: Test Code
  * accessed before it is defined.
  */
 
-/// Question
-/**
- * What would be the output of the following code?
- */
+// Question 2: What would be the output of the following code?
 
 var x = 21;
 
